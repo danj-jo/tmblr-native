@@ -6,6 +6,8 @@ UI features routes for :
 - Activity (nests messages and likes)
 - Profile (nests settings)
 
+I also use AsyncStorage to store session data, which is how I supply the posts from users that are followed and who is followed, as well as login data. 
+
 <img width="1440" height="900" alt="Screenshot 2025-08-11 at 4 46 10 PM" src="https://github.com/user-attachments/assets/3d23fa4a-17e0-4674-9b3d-053f257c7b39" />
 
 <img width="1440" height="900" alt="Screenshot 2025-08-11 at 4 46 07 PM" src="https://github.com/user-attachments/assets/ba5ac563-75e3-4b55-92f7-01326404daf8" />
