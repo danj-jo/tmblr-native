@@ -11,10 +11,16 @@ const Post  = (post:  post) => {
     return (
         <>
             <View style={{backgroundColor: "white", minHeight: 300, marginVertical: 5}}>
-                <View style={{flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 20}}>
+                <View style={{flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 5, margin: 3}}>
+                    <View style={{flexDirection: "row", alignItems: "center"}}>
                     <Image source={{uri:profilePicture}}
-                            resizeMethod={"none"}
-                            style={{width: 80, height: 80, borderRadius: 80}} />
+                            resizeMethod={"auto"}
+                            style={{width: 60, height: 60, borderRadius: 80, paddingTop: 5}} />
+                        <View style={{margin: 10}}>
+                    <Text style={{fontSize: 15, fontWeight: "semibold"}}> {post.username}</Text>
+                        </View>
+                    </View>
+
                     <View style={{flexDirection: "row", alignItems: "center", gap: 10}}>
                         <TouchableOpacity
                             onPress={async () => {
@@ -47,9 +53,11 @@ const Post  = (post:  post) => {
                     </View>
 
                 </View>
+                <View style={{backgroundColor: "gray", height: 130, paddingTop: 20, marginTop: 30}}>
                      {post.content.images ?? <Image source={{uri: post.content.images}}/>}
-                    <Text> {post.content.text} </Text>
-                <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", position: 'absolute', bottom: 5, left: 0, right: 0}}>
+                    <Text style={{fontSize: 20}}> {post.content.text} </Text>
+                </View>
+                <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center", position: 'absolute', bottom: 5, left: 0, right: 0, paddingHorizontal: 5}}>
 
                         <View
                         style={{backgroundColor: "#EEEEEE", width: 70, borderRadius: 50, flexDirection: "row", padding: 5}}>

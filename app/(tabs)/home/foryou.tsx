@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, SafeAreaView, Pressable, ScrollView, FlatList} from 'react-native';
 import Post from "@/components/ui/post";
-import {Stack, useRouter} from "expo-router";
-import {FontAwesome, MaterialIcons} from "@expo/vector-icons";
+
 
 const Foryou = () => {
     const [posts, setPosts] = useState([]);
@@ -20,7 +19,7 @@ const Foryou = () => {
                 setLoading(false);
             });
     }, []);
-    const router = useRouter()
+
 
     // @ts-ignore
     // @ts-ignore
@@ -33,6 +32,7 @@ const Foryou = () => {
                 data={posts}
                 renderItem={({ item }) => (
                     <Post
+                        username={item.username}
                         profilePicture={item.profilePicture}
                         createdAt={item.createdAt}
                         notes={item.notes}

@@ -48,10 +48,11 @@ const Following = () => {
     return (
         <View style={{ backgroundColor: '#36465D', flex: 1 }}>
             <FlatList
+                keyExtractor={post => post.id}
                 data={posts}
-                keyExtractor={(post) => post.id}
                 renderItem={({ item }) => (
                     <Post
+                        username={item.username}
                         profilePicture={item.profilePicture}
                         createdAt={item.createdAt}
                         notes={item.notes}

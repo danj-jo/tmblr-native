@@ -10,6 +10,7 @@ export type post = {
     content: postContent;
     createdAt: string;
     notes: number,
+    username: string
 }
 
 export interface user {
